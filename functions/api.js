@@ -7,3 +7,5 @@ const clients = new Map();
 wss.on('connection', (socket) => {
     socket.send('hello world');
 })
+
+export const handler = wss
