@@ -1,7 +1,7 @@
 import ws from 'ws';
-import serverless from 'serverless-http';
+import serverless from 'serverless-websocket';
 
-const wss = new ws.Server({ port: process.env.PORT, noServer: true });
+const wss = new ws.WebSocketServer({ port: process.env.PORT });
 
 const clients = new Map();
 
